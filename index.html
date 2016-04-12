@@ -3,6 +3,29 @@
 </head>
 <body>
 <h1>Manu Mohan T</h1>
-<h3>This site is under construction</h3>
+<div>
+    <script id="playerConf">
+       
+    (function loadScript() {
+
+        var playerwidth = 300;
+        var playerheight = 250;
+        var ismuted = true;
+        var url = "http://hk-vserver.azurewebsites.net/vast/campaign/CRVKOfP0p0iDTWxNtyDBlg";
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+        var css = document.createElement("link");
+        css.href = "consolidStyle.css";
+        css.rel = "stylesheet";
+        document.getElementsByTagName("head")[0].appendChild(css);
+        var qs = { "width": playerwidth, "height": playerheight, "ismuted": ismuted, "url": url };
+        script.id = "consolidJS";
+        script.src = "sole.js#" + JSON.stringify(qs);
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+    )();
+    
+    </script>
+</div>
 </body>
 </html>
