@@ -3,15 +3,19 @@
 </head>
 <body>
 <h1>Manu Mohan T</h1>
+<input type='text' placeholder='width' id='wd' />
+<input type='text' placeholder='height' id='ht' />
+<input type='text' placeholder='adtagURL' id='adurl' />
+<button  onclick='getPlayer();'/>
 <div>
     <script id="playerConf">
        
-    (function loadScript() {
+    function loadScript() {
 
-        var playerwidth = 300;
-        var playerheight = 250;
+        var playerwidth = document.getElementById('wd').value;
+        var playerheight = document.getElementById('ht').value;
         var ismuted = true;
-        var url = "http://www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test";
+        var url = document.getElementById('adurl').value;
         var script = document.createElement("script")
         script.type = "text/javascript";
         var css = document.createElement("link");
@@ -23,7 +27,7 @@
         script.src = "sole.js#" + JSON.stringify(qs);
         document.getElementsByTagName("head")[0].appendChild(script);
     }
-    )();
+    
     
     </script>
 </div>
